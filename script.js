@@ -370,15 +370,26 @@ document.addEventListener('keydown', function(event) {
 // Main Portfolio Class
 class Portfolio {
     constructor() {
+        console.log('Portfolio constructor started');
+        
         this.nav = document.getElementById('navigation');
+        console.log('Nav element:', this.nav);
+        
         this.navLinks = document.querySelectorAll('.nav-link');
+        console.log('Nav links found:', this.navLinks.length);
+        
         this.scrollArrow = document.querySelector('.scroll-arrow');
+        console.log('Scroll arrow:', this.scrollArrow);
         
         this.mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        console.log('Mobile menu btn:', this.mobileMenuBtn);
+        
         this.sections = ['hero', 'about', 'games', 'experience', 'contact'];
         this.activeSection = 'hero';
         
+        console.log('About to call init()');
         this.init();
+        console.log('Portfolio constructor completed');
     }
     
     init() {
@@ -471,10 +482,14 @@ class Portfolio {
         
         
         // Mobile menu (placeholder for future implementation)
-        this.mobileMenuBtn.addEventListener('click', () => {
-            // Future: implement mobile menu toggle
-            console.log('Mobile menu clicked - implement dropdown menu');
-        });
+        if (this.mobileMenuBtn) {
+            this.mobileMenuBtn.addEventListener('click', () => {
+                // Future: implement mobile menu toggle
+                console.log('Mobile menu clicked - implement dropdown menu');
+            });
+        } else {
+            console.log('Mobile menu button not found');
+        }
     }
     
     scrollToSection(sectionId) {
@@ -533,7 +548,8 @@ class Portfolio {
         
         // Add stagger animation to cards
         this.addStaggerAnimation('.highlight-card', 100);
-        this.addStaggerAnimation('.game-card', 150);
+        // Temporarily disabled game-card animation to fix click issues
+        // this.addStaggerAnimation('.game-card', 150);
         this.addStaggerAnimation('.contact-card', 100);
         this.addStaggerAnimation('.timeline-item', 200);
     }
@@ -830,20 +846,47 @@ class PortfolioAnalytics {
 
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM Content Loaded - starting initialization');
+    
     // Initialize main portfolio functionality
-    window.portfolio = new Portfolio();
+    try {
+        window.portfolio = new Portfolio();
+        console.log('Portfolio initialized successfully');
+    } catch (error) {
+        console.error('Portfolio initialization failed:', error);
+    }
     
     // Initialize enhanced interactions
-    new PortfolioInteractions();
+    try {
+        new PortfolioInteractions();
+        console.log('PortfolioInteractions initialized');
+    } catch (error) {
+        console.error('PortfolioInteractions failed:', error);
+    }
     
     // Initialize performance optimizations
-    new PortfolioPerformance();
+    try {
+        new PortfolioPerformance();
+        console.log('PortfolioPerformance initialized');
+    } catch (error) {
+        console.error('PortfolioPerformance failed:', error);
+    }
     
     // Initialize error handling
-    new PortfolioErrorHandling();
+    try {
+        new PortfolioErrorHandling();
+        console.log('PortfolioErrorHandling initialized');
+    } catch (error) {
+        console.error('PortfolioErrorHandling failed:', error);
+    }
     
     // Initialize analytics
-    new PortfolioAnalytics();
+    try {
+        new PortfolioAnalytics();
+        console.log('PortfolioAnalytics initialized');
+    } catch (error) {
+        console.error('PortfolioAnalytics failed:', error);
+    }
     
     console.log('🎮 Portfolio with game modals initialized successfully!');
 });
