@@ -19,14 +19,14 @@ const Hero = () => {
       }`}>
         {/* Profile Image */}
         <div className="mb-8 relative inline-block">
-          <div className="w-48 h-48 mx-auto rounded-full overflow-hidden glow-border animate-glow-pulse">
+          <div className="w-48 h-48 mx-auto rounded-full overflow-hidden glow-border">
             <img 
               src={profileImage} 
               alt="Diego Prates de Andrade - Game Producer"
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
-          <div className="absolute -inset-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full opacity-20 blur-xl animate-float" />
+          <div className="absolute -inset-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full opacity-20 blur-xl" />
         </div>
 
         {/* Name */}
