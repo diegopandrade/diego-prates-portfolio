@@ -282,22 +282,17 @@ body {
     animation: bounce 2s infinite;
 }
 
-.scroll-indicator-inner {
-    width: 1.5rem;
-    height: 2.5rem;
-    border: 2px solid var(--primary);
-    border-radius: 1.5rem;
-    display: flex;
-    justify-content: center;
+.scroll-arrow {
+    font-size: 1.5rem;
+    color: var(--primary);
+    opacity: 0.7;
+    transition: var(--transition-smooth);
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.3);
 }
 
-.scroll-indicator-dot {
-    width: 0.25rem;
-    height: 0.75rem;
-    background: var(--primary);
-    border-radius: 0.25rem;
-    margin-top: 0.5rem;
-    animation: pulse 2s infinite;
+.scroll-arrow:hover {
+    opacity: 1;
+    transform: translateY(2px);
 }
 
 /* Buttons */
