@@ -219,51 +219,69 @@ let currentMediaIndex = 0;
 
 // Modal functions
 function openGameModal(gameId) {
+    console.log('openGameModal called with', gameId);
     const game = gameData[gameId];
-    if (!game) return;
+    if (!game) {
+        console.warn('Game not found for id:', gameId);
+        return;
+    }
     
     currentGameId = gameId;
     currentMediaIndex = 0;
     
-    // Populate modal content
-    document.getElementById('modalTitle').textContent = game.title;
-    document.getElementById('modalYear').textContent = game.year;
-    document.getElementById('modalStatus').textContent = game.status;
-    document.getElementById('modalRole').textContent = game.role;
-    document.getElementById('modalDescription').textContent = game.description;
+    // Show modal immediately to avoid silent failures
+    const modalEl = document.getElementById('gameModal');
+    if (modalEl) {
+        modalEl.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
     
-    // Set status badge class
-    const statusElement = document.getElementById('modalStatus');
-    statusElement.className = game.status === 'Released' ? 'info-status status-released' : 'info-status status-development';
-    
-    // Populate platforms
-    const platformsContainer = document.getElementById('modalPlatforms');
-    platformsContainer.innerHTML = game.platforms.map(platform => 
-        `<span class="platform-tag">${platform}</span>`
-    ).join('');
-    
-    // Populate responsibilities
-    const responsibilitiesContainer = document.getElementById('modalResponsibilities');
-    responsibilitiesContainer.innerHTML = game.responsibilities.map(responsibility => 
-        `<li>${responsibility}</li>`
-    ).join('');
-    
-    // Populate tech stack
-    const techStackContainer = document.getElementById('modalTechStack');
-    techStackContainer.innerHTML = game.techStack.map(tech => 
-        `<span class="tech-tag">${tech}</span>`
-    ).join('');
-    
-    // Setup gallery
-    setupGallery(game.media);
-    
-    // Show modal
-    document.getElementById('gameModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
+    try {
+        // Populate modal content
+        document.getElementById('modalTitle').textContent = game.title;
+        document.getElementById('modalYear').textContent = game.year;
+        document.getElementById('modalStatus').textContent = game.status;
+        document.getElementById('modalRole').textContent = game.role;
+        document.getElementById('modalDescription').textContent = game.description;
+        
+        // Set status badge class
+        const statusElement = document.getElementById('modalStatus');
+        statusElement.className = game.status === 'Released' ? 'info-status status-released' : 'info-status status-development';
+        
+        // Populate platforms
+        const platformsContainer = document.getElementById('modalPlatforms');
+        if (platformsContainer) {
+            platformsContainer.innerHTML = game.platforms.map(platform => 
+                `<span class="platform-tag">${platform}</span>`
+            ).join('');
+        }
+        
+        // Populate responsibilities
+        const responsibilitiesContainer = document.getElementById('modalResponsibilities');
+        if (responsibilitiesContainer) {
+            responsibilitiesContainer.innerHTML = game.responsibilities.map(responsibility => 
+                `<li>${responsibility}</li>`
+            ).join('');
+        }
+        
+        // Populate tech stack
+        const techStackContainer = document.getElementById('modalTechStack');
+        if (techStackContainer) {
+            techStackContainer.innerHTML = game.techStack.map(tech => 
+                `<span class="tech-tag">${tech}</span>`
+            ).join('');
+        }
+        
+        // Setup gallery
+        setupGallery(game.media);
+    } catch (err) {
+        console.error('Failed to populate modal:', err);
+    }
 }
 
 function closeGameModal() {
-    document.getElementById('gameModal').style.display = 'none';
+    const modal = document.getElementById('gameModal');
+    if (modal) modal.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
 
@@ -366,6 +384,53 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+
+// Expose modal functions globally
+window.openGameModal = openGameModal;
+window.closeGameModal = closeGameModal;
+window.previousMedia = previousMedia;
+window.nextMedia = nextMedia;
+window.selectMedia = selectMedia;
+
+// Fallback: attach click listeners to game cards by parsing existing markup
+const titleToId = {
+    'Contraband': 'contraband',
+    'Star Wars Outlaws': 'star-wars-outlaws',
+    'Avatar: Frontiers of Pandora': 'avatar-pandora',
+    'Tin & Kuna': 'tin-kuna',
+    'Idle Idol': 'idle-idol',
+    'Holo Crimes': 'holo-crimes',
+    'Kepler - Pathfinder': 'kepler-pathfinder',
+    'Sletters': 'sletters',
+    'Go Surf!': 'go-surf',
+    'Like a Boss!': 'like-a-boss',
+    'Taikodom - Living Universe': 'taikodom'
+};
+
+function wireGameCards() {
+    document.querySelectorAll('.game-card').forEach(card => {
+        // Avoid duplicate listeners
+        if (card._wired) return;
+        card.addEventListener('click', (e) => {
+            let id = null;
+            const attr = card.getAttribute('onclick');
+            if (attr) {
+                const match = attr.match(/openGameModal\(['\"](.+?)['\"]\)/);
+                if (match) id = match[1];
+            }
+            if (!id) {
+                const titleEl = card.querySelector('.game-title');
+                const title = titleEl ? (titleEl.textContent || '').trim() : '';
+                if (title && titleToId[title]) id = titleToId[title];
+            }
+            if (id) {
+                e.preventDefault();
+                openGameModal(id);
+            }
+        }, { passive: true });
+        card._wired = true;
+    });
+}
 
 // Main Portfolio Class
 class Portfolio {
@@ -886,6 +951,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('PortfolioAnalytics initialized');
     } catch (error) {
         console.error('PortfolioAnalytics failed:', error);
+    }
+    
+    try {
+        wireGameCards();
+        console.log('Game cards wired');
+    } catch (e) {
+        console.error('Wiring game cards failed:', e);
     }
     
     console.log('🎮 Portfolio with game modals initialized successfully!');
