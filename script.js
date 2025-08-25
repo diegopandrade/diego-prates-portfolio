@@ -4,6 +4,7 @@ class Portfolio {
     constructor() {
         this.nav = document.getElementById('navigation');
         this.navLinks = document.querySelectorAll('.nav-link');
+        this.scrollArrow = document.querySelector('.scroll-arrow');
         
         this.mobileMenuBtn = document.getElementById('mobile-menu-btn');
         this.sections = ['hero', 'about', 'games', 'experience', 'contact'];
@@ -42,8 +43,18 @@ class Portfolio {
         
         if (scrollTop > 50) {
             this.nav.classList.add('scrolled');
+            // Hide scroll arrow when scrolling down
+            if (this.scrollArrow) {
+                this.scrollArrow.style.opacity = '0';
+                this.scrollArrow.style.pointerEvents = 'none';
+            }
         } else {
             this.nav.classList.remove('scrolled');
+            // Show scroll arrow when at top
+            if (this.scrollArrow) {
+                this.scrollArrow.style.opacity = '0.7';
+                this.scrollArrow.style.pointerEvents = 'auto';
+            }
         }
     }
     
