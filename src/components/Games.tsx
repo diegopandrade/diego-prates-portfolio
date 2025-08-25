@@ -1,58 +1,103 @@
 const Games = () => {
   const games = [
     {
-      title: "Apex Legends: Breakout",
+      title: "Contraband",
+      year: "TBA",
+      role: "Producer",
+      platforms: ["PC", "Xbox Series X/S"],
+      description: "Open-world co-op action game from Avalanche Studios featuring smuggling operations in a dangerous world.",
+      status: "In Development",
+      image: "📦"
+    },
+    {
+      title: "Star Wars Outlaws",
       year: "2024",
-      role: "Technical Producer",
-      platforms: ["PC", "PlayStation 5", "Xbox Series X/S"],
-      description: "Battle royale evolution with groundbreaking new mechanics and enhanced competitive features.",
-      status: "Released",
-      image: "🎯"
-    },
-    {
-      title: "Mad Max: Fury Road - The Game",
-      year: "2023",
-      role: "Lead Producer",
+      role: "Producer",
       platforms: ["PC", "PlayStation 5", "Xbox Series X/S", "Nintendo Switch"],
-      description: "Open-world action adventure set in the iconic Mad Max universe with innovative vehicle combat.",
+      description: "First open-world Star Wars game where you play as scoundrel Kay Vess in the criminal underworld.",
       status: "Released",
-      image: "🏜️"
+      image: "⭐"
     },
     {
-      title: "Just Cause 5: Global Chaos",
+      title: "Avatar: Frontiers of Pandora",
+      year: "2023",
+      role: "Producer",
+      platforms: ["PC", "PlayStation 5", "Xbox Series X/S"],
+      description: "First-person action-adventure game set in the Western Frontier of Pandora with stunning visuals.",
+      status: "Released",
+      image: "🌿"
+    },
+    {
+      title: "Tin & Kuna",
       year: "2022",
-      role: "Senior Producer",
-      platforms: ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S"],
-      description: "The ultimate sandbox destruction experience with next-gen physics and massive open worlds.",
+      role: "Producer",
+      platforms: ["PC", "Nintendo Switch", "PlayStation 4"],
+      description: "Charming adventure platformer featuring a magical journey through beautiful hand-crafted worlds.",
       status: "Released",
-      image: "💥"
+      image: "🏔️"
     },
     {
-      title: "Generation Zero: Extended",
+      title: "Idle Idol",
       year: "2021",
-      role: "Technical Producer",
-      platforms: ["PC", "PlayStation 4", "Xbox One"],
-      description: "Survival action game set in 1980s Sweden with cooperative multiplayer and robot adversaries.",
+      role: "Producer",
+      platforms: ["Android", "iOS"],
+      description: "K-Pop idol management game where you build your own entertainment agency and create superstar idols.",
       status: "Released",
-      image: "🤖"
+      image: "🎤"
     },
     {
-      title: "Hunter: Call of the Wild - Arctic",
+      title: "Holo Crimes",
       year: "2020",
       role: "Producer",
-      platforms: ["PC", "PlayStation 4", "Xbox One"],
-      description: "Immersive hunting experience in pristine arctic environments with realistic wildlife behavior.",
+      platforms: ["PC", "PlayStation 5", "Nintendo Switch"],
+      description: "Detective mystery game featuring holographic crime scene investigation and futuristic forensics.",
       status: "Released",
-      image: "🦌"
+      image: "🔍"
     },
     {
-      title: "Project Nexus",
-      year: "2025",
-      role: "Executive Producer",
-      platforms: ["TBA"],
-      description: "Next-generation action RPG pushing the boundaries of interactive storytelling.",
-      status: "In Development",
-      image: "🔮"
+      title: "Kepler - Pathfinder",
+      year: "2019",
+      role: "Producer",
+      platforms: ["PC", "PlayStation 4", "Xbox One"],
+      description: "Space exploration game where you navigate through distant worlds and uncover cosmic mysteries.",
+      status: "Released",
+      image: "🚀"
+    },
+    {
+      title: "Sletters",
+      year: "2018",
+      role: "Producer",
+      platforms: ["Android", "iOS", "PC"],
+      description: "Innovative word puzzle game combining letter manipulation with strategic thinking and wordplay.",
+      status: "Released",
+      image: "📝"
+    },
+    {
+      title: "Go Surf!",
+      year: "2017",
+      role: "Producer",
+      platforms: ["Android", "iOS"],
+      description: "Relaxing endless surfing game with realistic wave physics and beautiful ocean environments.",
+      status: "Released",
+      image: "🏄"
+    },
+    {
+      title: "Like a Boss!",
+      year: "2016",
+      role: "Producer",
+      platforms: ["Android", "iOS"],
+      description: "Business management simulation where you build and manage your corporate empire from the ground up.",
+      status: "Released",
+      image: "💼"
+    },
+    {
+      title: "Taikodom - Living Universe",
+      year: "2008",
+      role: "Producer",
+      platforms: ["PC"],
+      description: "Sci-fi MMORPG set in the 23rd century featuring space combat, ship customization, and galactic exploration.",
+      status: "Released",
+      image: "🌌"
     }
   ];
 
@@ -64,6 +109,8 @@ const Games = () => {
       "Xbox One": "🎮",
       "Xbox Series X/S": "🎮",
       "Nintendo Switch": "🎮",
+      "Android": "📱",
+      "iOS": "📱",
       "TBA": "❓"
     };
     return icons[platform] || "🎮";
