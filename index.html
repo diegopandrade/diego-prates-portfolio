@@ -1,25 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Prates de Andrade - Technical Producer | Game Development Portfolio</title>
-    <meta name="description" content="Technical Producer at Avalanche Studios with 10+ years experience in AAA and indie game development. Portfolio showcasing award-winning projects and technical leadership." />
-    <meta name="author" content="Diego Prates de Andrade" />
-    <meta name="keywords" content="game producer, technical producer, game development, Avalanche Studios, AAA games, project management" />
+    <meta name="description" content="Technical Producer at Avalanche Studios with 10+ years experience in AAA and indie game development. Portfolio showcasing award-winning projects and technical leadership.">
+    <meta name="author" content="Diego Prates de Andrade">
+    <meta name="keywords" content="game producer, technical producer, game development, Avalanche Studios, AAA games, project management">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Diego Prates de Andrade - Technical Producer Portfolio">
+    <meta property="og:description" content="Technical Producer at Avalanche Studios specializing in AAA game development and technical leadership.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lovable_dev">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://diegoprates.dev">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Diego Prates de Andrade",
+        "jobTitle": "Technical Producer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Avalanche Studios"
+        },
+        "url": "https://diegoprates.dev",
+        "sameAs": [
+            "https://linkedin.com/in/diegoprates",
+            "https://twitter.com/diegoprates_dev",
+            "https://github.com/diegoprates"
+        ],
+        "knowsAbout": ["Game Development", "Technical Production", "Project Management", "AAA Games"]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <button id="logo-btn" class="logo">DP</button>
+                
+                <!-- Navigation Links -->
+                <div class="nav-links">
+                    <button class="nav-link active" data-section="hero">Home</button>
+                    <button class="nav-link" data-section="about">About</button>
+                    <button class="nav-link" data-section="games">Games</button>
+                    <button class="nav-link" data-section="experience">Experience</button>
+                    <button class="nav-link" data-section="contact">Contact</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="Diego Prates de Andrade - Technical Producer Portfolio" />
-    <meta property="og:description" content="Technical Producer at Avalanche Studios specializing in AAA game development and technical leadership." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <!-- Background Effects -->
+            <div class="hero-bg"></div>
+            <div class="hero-radial"></div>
+            
+            <div class="hero-content">
+                <!-- Profile Image -->
+                <div class="profile-container">
+                    <div class="profile-image-wrapper">
+                        <img src="src/assets/diego-profile.jpg" alt="Diego Prates de Andrade - Game Producer" class="profile-image">
+                    </div>
+                    <div class="profile-glow"></div>
+                </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+                <!-- Name -->
+                <h1 class="hero-title">Diego Prates de Andrade</h1>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <!-- Title -->
+                <p class="hero-subtitle">
+                    Technical Producer at <span class="highlight">Avalanche Studios</span>
+                </p>
+
+                <!-- Tagline -->
+                <p class="hero-tagline">
+                    Crafting extraordinary gaming experiences through technical excellence and creative vision. 
+                    Bridging the gap between ambitious design and flawless execution.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <button class="cyber-button" data-scroll="about">
+                        Explore My Work
+                        <span class="button-arrow">→</span>
+                    </button>
+                    <button class="outline-button" data-scroll="contact">
+                        Get In Touch
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-indicator-inner">
+                    <div class="scroll-indicator-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Description -->
+                    <div class="about-content">
+                        <h3 class="about-heading">Turning Vision Into Reality</h3>
+                        <p class="about-text">
+                            As a Technical Producer at Avalanche Studios, I specialize in bridging the creative and technical aspects of game development. My expertise lies in transforming ambitious game concepts into polished, market-ready experiences.
+                        </p>
+                        <p class="about-text">
+                            With a deep understanding of both the artistic vision and technical constraints, I ensure that every project delivers exceptional quality while meeting deadlines and budget requirements. My approach combines agile methodologies with creative problem-solving to overcome the unique challenges each game presents.
+                        </p>
+                        <p class="about-text">
+                            I thrive in collaborative environments where innovation meets execution, always pushing the boundaries of what's possible in interactive entertainment.
+                        </p>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Published Games</div>
+                            <div class="stat-description">Across multiple platforms and genres</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">50M+</div>
+                            <div class="stat-label">Players Reached</div>
+                            <div class="stat-description">Global audience engagement</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Industry Awards</div>
+                            <div class="stat-description">Recognition for excellence</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Highlights -->
+                <div class="highlights-section">
+                    <h3 class="highlights-title">Career Highlights</h3>
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🎮</div>
+                            <h4 class="highlight-title">10+ Years in Gaming</h4>
+                            <p class="highlight-description">Decade of experience across AAA and indie game development</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🚀</div>
+                            <h4 class="highlight-title">Technical Leadership</h4>
+                            <p class="highlight-description">Led cross-functional teams to deliver complex gaming projects</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🏆</div>
+                            <h4 class="highlight-title">Award-Winning Projects</h4>
+                            <p class="highlight-description">Contributed to critically acclaimed and commercially successful titles</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">⚡</div>
+                            <h4 class="highlight-title">Process Innovation</h4>
+                            <p class="highlight-description">Streamlined development pipelines reducing time-to-market by 30%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="section games-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Game Portfolio</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-description">
+                        A showcase of the interactive experiences I've helped bring to life across multiple platforms and genres.
+                    </p>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-icon">🎯</div>
+                        <div class="game-content">
+                            <div class="game-header">
+                                <h3 class="game-title">Apex Legends: Breakout</h3>
+                                <div class="game-meta">
+                                    <span class="game-year">2024</span>
+                                    <span class="status-badge status-released">Released</span>
+                                </div>
+                            </div>
+                            <p class="game-role">Technical Producer</p>
+                            <p class="game-description">
+                                Battle royale evolution with groundbreaking new mechanics and enhanced competitive features.
+                            </p>
+                            <div class="platforms">
+                                <p class="platforms-label">Available Platforms:</p>
+                                <div class="platforms-list">
+                                    <span class="platform-tag">💻 PC</span>
+                                    <span class="platform-tag">🎮 PlayStation 5</span>
+                                    <span class="platform-tag">🎮 Xbox Series X/S</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-overlay"></div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-icon">🏜️</div>
+                        <div class="game-content">
+                            <div class="game-header">
+                                <h3 class="game-title">Mad Max: Fury Road - The Game</h3>
+                                <div class="game-meta">
+                                    <span class="game-year">2023</span>
+                                    <span class="status-badge status-released">Released</span>
+                                </div>
+                            </div>
+                            <p class="game-role">Lead Producer</p>
+                            <p class="game-description">
+                                Open-world action adventure set in the iconic Mad Max universe with innovative vehicle combat.
+                            </p>
+                            <div class="platforms">
+                                <p class="platforms-label">Available Platforms:</p>
+                                <div class="platforms-list">
+                                    <span class="platform-tag">💻 PC</span>
+                                    <span class="platform-tag">🎮 PlayStation 5</span>
+                                    <span class="platform-tag">🎮 Xbox Series X/S</span>
+                                    <span class="platform-tag">🎮 Nintendo Switch</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-overlay"></div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-icon">💥</div>
+                        <div class="game-content">
+                            <div class="game-header">
+                                <h3 class="game-title">Just Cause 5: Global Chaos</h3>
+                                <div class="game-meta">
+                                    <span class="game-year">2022</span>
+                                    <span class="status-badge status-released">Released</span>
+                                </div>
+                            </div>
+                            <p class="game-role">Senior Producer</p>
+                            <p class="game-description">
+                                The ultimate sandbox destruction experience with next-gen physics and massive open worlds.
+                            </p>
+                            <div class="platforms">
+                                <p class="platforms-label">Available Platforms:</p>
+                                <div class="platforms-list">
+                                    <span class="platform-tag">💻 PC</span>
+                                    <span class="platform-tag">🎮 PlayStation 4</span>
+                                    <span class="platform-tag">🎮 PlayStation 5</span>
+                                    <span class="platform-tag">🎮 Xbox One</span>
+                                    <span class="platform-tag">🎮 Xbox Series X/S</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-overlay"></div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-icon">🤖</div>
+                        <div class="game-content">
+                            <div class="game-header">
+                                <h3 class="game-title">Generation Zero: Extended</h3>
+                                <div class="game-meta">
+                                    <span class="game-year">2021</span>
+                                    <span class="status-badge status-released">Released</span>
+                                </div>
+                            </div>
+                            <p class="game-role">Technical Producer</p>
+                            <p class="game-description">
+                                Survival action game set in 1980s Sweden with cooperative multiplayer and robot adversaries.
+                            </p>
+                            <div class="platforms">
+                                <p class="platforms-label">Available Platforms:</p>
+                                <div class="platforms-list">
+                                    <span class="platform-tag">💻 PC</span>
+                                    <span class="platform-tag">🎮 PlayStation 4</span>
+                                    <span class="platform-tag">🎮 Xbox One</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-overlay"></div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-icon">🦌</div>
+                        <div class="game-content">
+                            <div class="game-header">
+                                <h3 class="game-title">Hunter: Call of the Wild - Arctic</h3>
+                                <div class="game-meta">
+                                    <span class="game-year">2020</span>
+                                    <span class="status-badge status-released">Released</span>
+                                </div>
+                            </div>
+                            <p class="game-role">Producer</p>
+                            <p class="game-description">
+                                Immersive hunting experience in pristine arctic environments with realistic wildlife behavior.
+                            </p>
+                            <div class="platforms">
+                                <p class="platforms-label">Available Platforms:</p>
+                                <div class="platforms-list">
+                                    <span class="platform-tag">💻 PC</span>
+                                    <span class="platform-tag">🎮 PlayStation 4</span>
+                                    <span class="platform-tag">🎮 Xbox One</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-overlay"></div>
+                    </div>
+
+                    <div class="game-card">
+                        <div class="game-icon">🔮</div>
+                        <div class="game-content">
+                            <div class="game-header">
+                                <h3 class="game-title">Project Nexus</h3>
+                                <div class="game-meta">
+                                    <span class="game-year">2025</span>
+                                    <span class="status-badge status-development">In Development</span>
+                                </div>
+                            </div>
+                            <p class="game-role">Executive Producer</p>
+                            <p class="game-description">
+                                Next-generation action RPG pushing the boundaries of interactive storytelling.
+                            </p>
+                            <div class="platforms">
+                                <p class="platforms-label">Available Platforms:</p>
+                                <div class="platforms-list">
+                                    <span class="platform-tag">❓ TBA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-description">
+                        A journey through the gaming industry, from indie studios to AAA development.
+                    </p>
+                </div>
+
+                <!-- Timeline -->
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-info">
+                                    <h3 class="timeline-title">Technical Producer</h3>
+                                    <p class="timeline-company">Avalanche Studios</p>
+                                </div>
+                                <div class="timeline-meta">
+                                    <p class="timeline-period">2022 - Present</p>
+                                    <p class="timeline-location">Stockholm, Sweden</p>
+                                </div>
+                            </div>
+                            <div class="timeline-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Leading production of next-generation AAA titles with budgets exceeding $50M</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Implemented agile development processes reducing development time by 25%</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Managing cross-functional teams of 80+ developers across multiple locations</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Pioneered new technical workflows for real-time collaboration</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-info">
+                                    <h3 class="timeline-title">Senior Producer</h3>
+                                    <p class="timeline-company">Avalanche Studios</p>
+                                </div>
+                                <div class="timeline-meta">
+                                    <p class="timeline-period">2019 - 2022</p>
+                                    <p class="timeline-location">Stockholm, Sweden</p>
+                                </div>
+                            </div>
+                            <div class="timeline-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Successfully shipped 3 major titles generating $200M+ in revenue</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Established quality assurance protocols improving bug reduction by 40%</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Led technical integration of new game engines and development tools</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Mentored junior producers and technical staff</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-info">
+                                    <h3 class="timeline-title">Producer</h3>
+                                    <p class="timeline-company">Avalanche Studios</p>
+                                </div>
+                                <div class="timeline-meta">
+                                    <p class="timeline-period">2017 - 2019</p>
+                                    <p class="timeline-location">New York, USA</p>
+                                </div>
+                            </div>
+                            <div class="timeline-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Coordinated development of open-world action games</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Managed relationships with external vendors and contractors</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Optimized resource allocation across multiple concurrent projects</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Delivered projects on time and within budget constraints</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-info">
+                                    <h3 class="timeline-title">Assistant Producer</h3>
+                                    <p class="timeline-company">Square Enix</p>
+                                </div>
+                                <div class="timeline-meta">
+                                    <p class="timeline-period">2015 - 2017</p>
+                                    <p class="timeline-location">Tokyo, Japan</p>
+                                </div>
+                            </div>
+                            <div class="timeline-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Supported production of JRPG titles for global markets</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Coordinated localization efforts across 8 different languages</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Managed QA testing phases and community feedback integration</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Contributed to project planning and milestone tracking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <div class="timeline-dot-inner"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-info">
+                                    <h3 class="timeline-title">Junior Producer</h3>
+                                    <p class="timeline-company">Indie Game Collective</p>
+                                </div>
+                                <div class="timeline-meta">
+                                    <p class="timeline-period">2013 - 2015</p>
+                                    <p class="timeline-location">São Paulo, Brazil</p>
+                                </div>
+                            </div>
+                            <div class="timeline-achievements">
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Produced 5 indie games from concept to market release</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Established development pipelines for small team efficiency</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Managed publishing relationships and marketing campaigns</p>
+                                </div>
+                                <div class="achievement">
+                                    <span class="achievement-bullet">▸</span>
+                                    <p>Built foundational skills in project management and team leadership</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Download -->
+                <div class="resume-section">
+                    <div class="resume-card">
+                        <h3 class="resume-title">Get the Full Story</h3>
+                        <p class="resume-description">
+                            Download my complete resume for detailed information about my experience and achievements.
+                        </p>
+                        <button class="cyber-button resume-button">
+                            <span class="resume-icon">📄</span>
+                            Download Resume
+                            <span class="button-arrow">↓</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-description">
+                        Ready to discuss your next gaming project or explore collaboration opportunities? I'd love to hear from you.
+                    </p>
+                </div>
+
+                <!-- Contact Methods Grid -->
+                <div class="contact-grid">
+                    <a href="mailto:diego.prates@email.com" class="contact-card">
+                        <div class="contact-content">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-info">
+                                <h3 class="contact-label">Email</h3>
+                                <p class="contact-value">diego.prates@email.com</p>
+                                <p class="contact-description">Best for business inquiries</p>
+                            </div>
+                            <div class="contact-arrow">→</div>
+                        </div>
+                    </a>
+
+                    <a href="https://linkedin.com/in/diegoprates" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-content">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-info">
+                                <h3 class="contact-label">LinkedIn</h3>
+                                <p class="contact-value">linkedin.com/in/diegoprates</p>
+                                <p class="contact-description">Professional networking</p>
+                            </div>
+                            <div class="contact-arrow">→</div>
+                        </div>
+                    </a>
+
+                    <a href="https://twitter.com/diegoprates_dev" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-content">
+                            <div class="contact-icon">🐦</div>
+                            <div class="contact-info">
+                                <h3 class="contact-label">Twitter</h3>
+                                <p class="contact-value">@diegoprates_dev</p>
+                                <p class="contact-description">Industry insights & updates</p>
+                            </div>
+                            <div class="contact-arrow">→</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/diegoprates" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-content">
+                            <div class="contact-icon">🎮</div>
+                            <div class="contact-info">
+                                <h3 class="contact-label">Portfolio</h3>
+                                <p class="contact-value">github.com/diegoprates</p>
+                                <p class="contact-description">Code samples & projects</p>
+                            </div>
+                            <div class="contact-arrow">→</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="cta-section">
+                    <div class="cta-card">
+                        <h3 class="cta-title">Let's Build Something Amazing</h3>
+                        <p class="cta-description">
+                            Whether you're looking to discuss a project, explore partnership opportunities, 
+                            or just want to connect with a fellow gaming enthusiast, I'm always open to meaningful conversations.
+                        </p>
+                        <a href="mailto:diego.prates@email.com" class="cyber-button">
+                            <span class="cta-icon">🚀</span>
+                            Start a Conversation
+                            <span class="button-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="footer">
+                    <p class="footer-text">
+                        © 2024 Diego Prates de Andrade. Crafted with passion for gaming excellence.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
