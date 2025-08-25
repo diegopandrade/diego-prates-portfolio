@@ -363,7 +363,7 @@ class PortfolioPerformance {
         // Preload critical resources
         const criticalResources = [
             'styles.css',
-            'src/assets/diego-profile.jpg'
+            'src/assets/diego-profile-new.jpg'
         ];
         
         criticalResources.forEach(resource => {
