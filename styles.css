@@ -542,8 +542,24 @@ body {
     transition: var(--transition-smooth);
 }
 
+.game-icon-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-smooth);
+    border: 2px solid var(--border);
+}
+
 .game-card:hover .game-icon {
     animation: pulse 1s ease-out;
+}
+
+.game-card:hover .game-icon-image {
+    transform: scale(1.05);
+    border-color: var(--primary);
+    box-shadow: var(--glow-subtle);
 }
 
 .game-content {
