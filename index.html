@@ -204,7 +204,7 @@
                 </div>
 
                 <div class="games-grid">
-                    <div class="game-card" onclick="openGameModal('contraband')">
+                    <div class="game-card">
                         <img src="src/assets/games/contraband.jpg" alt="Contraband game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -229,7 +229,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('star-wars-outlaws')">
+                    <div class="game-card">
                         <img src="src/assets/games/star-wars-outlaws.jpg" alt="Star Wars Outlaws game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -255,7 +255,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('avatar-pandora')">
+                    <div class="game-card">
                         <img src="src/assets/games/avatar-pandora.jpg" alt="Avatar: Frontiers of Pandora game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -281,7 +281,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('tin-kuna')">
+                    <div class="game-card">
                         <img src="src/assets/games/tin-kuna.jpg" alt="Tin & Kuna game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -307,7 +307,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('idle-idol')">
+                    <div class="game-card">
                         <img src="src/assets/games/idle-idol.jpg" alt="Idle Idol game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -332,7 +332,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('holo-crimes')">
+                    <div class="game-card">
                         <img src="src/assets/games/holo-crimes.jpg" alt="Holo Crimes game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -358,7 +358,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('kepler-pathfinder')">
+                    <div class="game-card">
                         <img src="src/assets/games/kepler-pathfinder.jpg" alt="Kepler - Pathfinder game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -384,7 +384,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('sletters')">
+                    <div class="game-card">
                         <img src="src/assets/games/sletters.jpg" alt="Sletters game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -410,7 +410,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('go-surf')">
+                    <div class="game-card">
                         <img src="src/assets/games/go-surf.jpg" alt="Go Surf! game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -435,7 +435,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('like-a-boss')">
+                    <div class="game-card">
                         <img src="src/assets/games/like-a-boss.jpg" alt="Like a Boss! game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -460,7 +460,7 @@
                         <div class="game-overlay"></div>
                     </div>
 
-                    <div class="game-card" onclick="openGameModal('taikodom')">
+                    <div class="game-card">
                         <img src="src/assets/games/taikodom.jpg" alt="Taikodom - Living Universe game screenshot" class="game-icon-image">
                         <div class="game-content">
                             <div class="game-header">
@@ -775,55 +775,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Game Detail Modal -->
-    <div id="gameModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle" class="modal-title"></h2>
-                <button class="modal-close" onclick="closeGameModal()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-gallery">
-                    <div class="gallery-main">
-                        <div id="galleryViewer" class="gallery-viewer">
-                            <!-- Main image/video will be inserted here -->
-                        </div>
-                        <div class="gallery-controls">
-                            <button id="prevBtn" class="gallery-btn" onclick="previousMedia()">‹</button>
-                            <button id="nextBtn" class="gallery-btn" onclick="nextMedia()">›</button>
-                        </div>
-                    </div>
-                    <div class="gallery-thumbnails" id="galleryThumbnails">
-                        <!-- Thumbnails will be inserted here -->
-                    </div>
-                </div>
-                <div class="modal-details">
-                    <div class="game-info">
-                        <div class="game-meta-info">
-                            <span id="modalYear" class="info-year"></span>
-                            <span id="modalStatus" class="info-status"></span>
-                            <span id="modalRole" class="info-role"></span>
-                        </div>
-                        <div id="modalPlatforms" class="info-platforms"></div>
-                        <p id="modalDescription" class="game-description"></p>
-                    </div>
-                    <div class="responsibilities">
-                        <h3>My Responsibilities</h3>
-                        <ul id="modalResponsibilities" class="responsibilities-list">
-                            <!-- Responsibilities will be inserted here -->
-                        </ul>
-                    </div>
-                    <div class="tech-stack">
-                        <h3>Technology Stack</h3>
-                        <div id="modalTechStack" class="tech-tags">
-                            <!-- Tech stack will be inserted here -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
