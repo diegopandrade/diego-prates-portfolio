@@ -4,7 +4,7 @@ class Portfolio {
     constructor() {
         this.nav = document.getElementById('navigation');
         this.navLinks = document.querySelectorAll('.nav-link');
-        this.logoBtn = document.getElementById('logo-btn');
+        
         this.mobileMenuBtn = document.getElementById('mobile-menu-btn');
         this.sections = ['hero', 'about', 'games', 'experience', 'contact'];
         this.activeSection = 'hero';
@@ -90,11 +90,6 @@ class Portfolio {
             });
         });
         
-        // Logo button
-        this.logoBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            this.scrollToSection('hero');
-        });
         
         // Mobile menu (placeholder for future implementation)
         this.mobileMenuBtn.addEventListener('click', () => {
