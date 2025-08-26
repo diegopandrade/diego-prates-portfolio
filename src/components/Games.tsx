@@ -34,7 +34,8 @@ const Games = () => {
       platforms: ["PC", "Nintendo Switch", "PlayStation 4"],
       description: "Charming adventure platformer featuring a magical journey through beautiful hand-crafted worlds.",
       status: "Released",
-      image: "🏔️"
+      image: "screenshot",
+      imageUrl: "/src/assets/games/tin-kuna-screenshot.jpg"
     },
     {
       title: "Idle Idol",
@@ -134,9 +135,26 @@ const Games = () => {
               className="game-card group cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Game Icon */}
-              <div className="text-6xl mb-6 text-center group-hover:animate-pulse">
-                {game.image}
+              {/* Game Icon/Image */}
+              <div className="mb-6 text-center group-hover:scale-105 transition-transform duration-300">
+                {game.imageUrl ? (
+                  <img 
+                    src={game.imageUrl} 
+                    alt={`${game.title} screenshot`}
+                    className="w-full h-32 object-cover rounded-lg border border-border/50"
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      target.style.display = 'none';
+                      if (fallback) fallback.style.display = 'block';
+                    }}
+                  />
+                ) : (
+                  <div className="text-6xl">{game.image}</div>
+                )}
+                {game.imageUrl && (
+                  <div className="text-6xl hidden">{game.image}</div>
+                )}
               </div>
 
               {/* Game Info */}
