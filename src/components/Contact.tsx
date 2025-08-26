@@ -8,20 +8,6 @@ const Contact = () => {
       description: "Best for business inquiries"
     },
     {
-      icon: "💼",
-      label: "LinkedIn",
-      value: "linkedin.com/in/diegoprates",
-      link: "https://linkedin.com/in/diegoprates",
-      description: "Professional networking"
-    },
-    {
-      icon: "🐦",
-      label: "Twitter",
-      value: "@diegoprates_dev",
-      link: "https://twitter.com/diegoprates_dev",
-      description: "Industry insights & updates"
-    },
-    {
       icon: "🎮",
       label: "Portfolio",
       value: "github.com/diegoprates",
