@@ -119,17 +119,11 @@ const Experience = () => {
 
         {/* Resume Download */}
         <div className="text-center mt-16">
-          <div className="game-card max-w-md mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Get the Full Story</h3>
-            <p className="text-muted-foreground mb-6">
-              Download my complete resume for detailed information about my experience and achievements.
-            </p>
-            <button className="cyber-button w-full group">
-              <span className="mr-2">📄</span>
-              Download Resume
-              <span className="ml-2 transition-transform group-hover:translate-x-1">↓</span>
-            </button>
-          </div>
+          <button className="cyber-button group">
+            <span className="mr-2">📄</span>
+            Download Resume
+            <span className="ml-2 transition-transform group-hover:translate-x-1">↓</span>
+          </button>
         </div>
       </div>
     </section>
