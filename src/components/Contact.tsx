@@ -6,13 +6,6 @@ const Contact = () => {
       value: "diego.prates@email.com",
       link: "mailto:diego.prates@email.com",
       description: "Best for business inquiries"
-    },
-    {
-      icon: "🎮",
-      label: "Portfolio",
-      value: "github.com/diegoprates",
-      link: "https://github.com/diegoprates",
-      description: "Code samples & projects"
     }
   ];
 
