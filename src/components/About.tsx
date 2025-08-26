@@ -1,26 +1,4 @@
 const About = () => {
-  const highlights = [
-    {
-      icon: "🎮",
-      title: "10+ Years in Gaming",
-      description: "Decade of experience across AAA and indie game development"
-    },
-    {
-      icon: "🚀",
-      title: "Technical Leadership",
-      description: "Led cross-functional teams to deliver complex gaming projects"
-    },
-    {
-      icon: "🏆",
-      title: "Award-Winning Projects",
-      description: "Contributed to critically acclaimed and commercially successful titles"
-    },
-    {
-      icon: "⚡",
-      title: "Process Innovation",
-      description: "Streamlined development pipelines reducing time-to-market by 30%"
-    }
-  ];
 
   return (
     <section id="about" className="section-padding">
@@ -67,23 +45,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Career Highlights */}
-        <div>
-          <h3 className="text-3xl font-bold text-center mb-12">Career Highlights</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {highlights.map((highlight, index) => (
-              <div 
-                key={index}
-                className="game-card text-center group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-4xl mb-4 group-hover:animate-bounce">{highlight.icon}</div>
-                <h4 className="text-xl font-bold text-foreground mb-3">{highlight.title}</h4>
-                <p className="text-muted-foreground">{highlight.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
