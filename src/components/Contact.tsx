@@ -50,23 +50,14 @@ const Contact = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="game-card max-w-lg mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Let's Build Something Amazing
-            </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Whether you're looking to discuss a project, explore partnership opportunities, 
-              or just want to connect with a fellow gaming enthusiast, I'm always open to meaningful conversations.
-            </p>
-            <a 
-              href="mailto:diego.prates@email.com"
-              className="cyber-button inline-flex items-center group"
-            >
-              <span className="mr-2">🚀</span>
-              Start a Conversation
-              <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
-            </a>
-          </div>
+          <a 
+            href="mailto:diego.prates@email.com"
+            className="cyber-button inline-flex items-center group"
+          >
+            <span className="mr-2">🚀</span>
+            Start a Conversation
+            <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+          </a>
         </div>
 
         {/* Footer */}
