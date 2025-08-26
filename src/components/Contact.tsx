@@ -1,3 +1,5 @@
+import { Linkedin } from "lucide-react";
+
 const Contact = () => {
   const contactMethods = [
     {
@@ -51,10 +53,12 @@ const Contact = () => {
         {/* Call to Action */}
         <div className="text-center">
           <a 
-            href="mailto:diego.prates@email.com"
+            href="https://www.linkedin.com/in/diegopandrade/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="cyber-button inline-flex items-center group"
           >
-            <span className="mr-2">🚀</span>
+            <Linkedin className="mr-2" size={20} />
             Start a Conversation
             <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
           </a>
