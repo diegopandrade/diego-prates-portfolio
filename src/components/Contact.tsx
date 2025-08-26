@@ -12,9 +12,9 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-dark-surface">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="contact" className="py-40 bg-dark-surface min-h-screen flex items-center">
+      <div className="max-w-4xl mx-auto w-full">
+        <div className="text-center mb-24">
           <h2 className="text-5xl font-bold mb-6 hero-gradient">Let's Connect</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-blue to-cyber-purple mx-auto rounded-full mb-6" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -23,7 +23,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Methods Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-20">
           {contactMethods.map((method, index) => (
             <a
               key={index}
@@ -65,7 +65,7 @@ const Contact = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-16 pt-8 border-t border-border">
+        <div className="text-center mt-24 pt-12 border-t border-border">
           <p className="text-muted-foreground">
             © 2024 Diego Prates de Andrade. Crafted with passion for gaming excellence.
           </p>
