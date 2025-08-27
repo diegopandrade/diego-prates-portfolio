@@ -152,20 +152,12 @@
     box-shadow: var(--shadow-card);
   }
 
-  .game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-cyber), var(--shadow-card);
-  }
 
   /* Interactive Elements */
   .interactive-element {
     transition: var(--transition-smooth);
   }
 
-  .interactive-element:hover {
-    transform: scale(1.05);
-    box-shadow: var(--glow-subtle);
-  }
 
   /* Cyber Button */
   .cyber-button {
@@ -202,10 +194,6 @@
     transition: transform 0.3s ease-out;
   }
 
-  .animated-underline:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
 
   /* Glowing Border */
   .glow-border {
@@ -213,8 +201,4 @@
     box-shadow: 0 0 20px hsl(var(--primary) / 0.1);
   }
 
-  .glow-border:hover {
-    border-color: hsl(var(--primary) / 0.6);
-    box-shadow: 0 0 30px hsl(var(--primary) / 0.2);
-  }
 }

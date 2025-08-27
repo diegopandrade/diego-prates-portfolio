@@ -23,7 +23,7 @@ const Hero = () => {
             <img 
               src={profileImage} 
               alt="Diego Prates de Andrade - Game Producer"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute -inset-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full opacity-20 blur-xl" />

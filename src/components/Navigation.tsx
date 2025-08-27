@@ -60,7 +60,7 @@ const Navigation = () => {
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('hero')}
-            className="text-2xl font-bold hero-gradient hover:scale-105 transition-transform"
+            className="text-2xl font-bold hero-gradient"
           >
             DP
           </button>
@@ -74,7 +74,7 @@ const Navigation = () => {
                 className={`relative font-medium transition-colors duration-300 ${
                   activeSection === item.id 
                     ? 'text-primary' 
-                    : 'text-muted-foreground hover:text-foreground'
+                    : 'text-muted-foreground'
                 }`}
               >
                 {item.label}
@@ -87,7 +87,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="text-foreground hover:text-primary transition-colors">
+            <button className="text-foreground">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                 <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>

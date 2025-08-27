@@ -86,7 +86,7 @@ const Experience = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Timeline Dot */}
-                <div className="relative z-10 w-16 h-16 bg-card border-2 border-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="relative z-10 w-16 h-16 bg-card border-2 border-primary rounded-full flex items-center justify-center">
                   <div className="w-6 h-6 bg-primary rounded-full animate-glow-pulse" />
                 </div>
 

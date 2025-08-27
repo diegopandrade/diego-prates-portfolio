@@ -124,9 +124,6 @@ body {
     padding: 0.5rem 0;
 }
 
-.nav-link:hover {
-    color: var(--foreground);
-}
 
 .nav-link.active {
     color: var(--primary);
@@ -152,9 +149,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.mobile-menu-btn:hover {
-    color: var(--primary);
-}
 
 /* Hero Section */
 .hero-section {
@@ -208,10 +202,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.profile-image-wrapper:hover {
-    border-color: hsl(195, 100%, 50%, 0.6);
-    box-shadow: 0 0 30px hsl(195, 100%, 50%, 0.2);
-}
 
 .profile-image {
     width: 100%;
@@ -220,9 +210,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.profile-image:hover {
-    transform: scale(1.05);
-}
 
 .profile-glow {
     position: absolute;
@@ -290,10 +277,6 @@ body {
     text-shadow: 0 0 10px hsl(var(--primary) / 0.3);
 }
 
-.scroll-arrow:hover {
-    opacity: 1;
-    transform: translateY(2px);
-}
 
 /* Buttons */
 .cyber-button {
@@ -431,10 +414,6 @@ body {
     box-shadow: var(--shadow-card);
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-cyber), var(--shadow-card);
-}
 
 .stat-number {
     font-size: 2.5rem;
@@ -481,10 +460,6 @@ body {
     box-shadow: var(--shadow-card);
 }
 
-.highlight-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-cyber), var(--shadow-card);
-}
 
 .highlight-icon {
     font-size: 2.5rem;
@@ -492,9 +467,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.highlight-card:hover .highlight-icon {
-    animation: bounce 0.6s ease-out;
-}
 
 .highlight-title {
     font-size: 1.25rem;
@@ -530,10 +502,6 @@ body {
     overflow: hidden;
 }
 
-.game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-cyber), var(--shadow-card);
-}
 
 .game-icon {
     font-size: 3.75rem;
@@ -552,15 +520,7 @@ body {
     border: 2px solid var(--border);
 }
 
-.game-card:hover .game-icon {
-    animation: pulse 1s ease-out;
-}
 
-.game-card:hover .game-icon-image {
-    transform: scale(1.05);
-    border-color: var(--primary);
-    box-shadow: var(--glow-subtle);
-}
 
 .game-content {
     display: flex;
@@ -582,9 +542,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.game-card:hover .game-title {
-    color: var(--primary);
-}
 
 .game-meta {
     display: flex;
@@ -665,9 +622,6 @@ body {
     pointer-events: none;
 }
 
-.game-card:hover .game-overlay {
-    opacity: 1;
-}
 
 /* Experience Section */
 .experience-section {
@@ -712,9 +666,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.timeline-item:hover .timeline-dot {
-    transform: scale(1.1);
-}
 
 .timeline-dot-inner {
     width: 1.5rem;
@@ -734,10 +685,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.timeline-item:hover .timeline-content {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-cyber), var(--shadow-card);
-}
 
 .timeline-header {
     display: flex;
@@ -856,10 +803,6 @@ body {
     display: block;
 }
 
-.contact-card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: var(--glow-subtle);
-}
 
 .contact-content {
     display: flex;
@@ -872,9 +815,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.contact-card:hover .contact-icon {
-    animation: bounce 0.6s ease-out;
-}
 
 .contact-info {
     flex: 1;
@@ -887,9 +827,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.contact-card:hover .contact-label {
-    color: var(--primary);
-}
 
 .contact-value {
     color: var(--muted-foreground);
@@ -910,10 +847,6 @@ body {
     transition: transform 0.3s ease-out;
 }
 
-.contact-card:hover .contact-value::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
 
 .contact-description {
     font-size: 0.875rem;
@@ -926,9 +859,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-.contact-card:hover .contact-arrow {
-    transform: translateX(0.25rem);
-}
 
 .cta-section {
     text-align: center;

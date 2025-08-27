@@ -34,15 +34,15 @@ const Contact = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center gap-4">
-                <div className="text-4xl group-hover:animate-bounce">{method.icon}</div>
+                <div className="text-4xl">{method.icon}</div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold text-foreground">
                     {method.label}
                   </h3>
-                  <p className="text-muted-foreground mb-1 animated-underline">{method.value}</p>
+                  <p className="text-muted-foreground mb-1">{method.value}</p>
                   <p className="text-sm text-muted-foreground">{method.description}</p>
                 </div>
-                <div className="text-2xl text-primary group-hover:translate-x-1 transition-transform">
+                <div className="text-2xl text-primary">
                   →
                 </div>
               </div>

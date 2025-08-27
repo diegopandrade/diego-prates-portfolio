@@ -136,7 +136,7 @@ const Games = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Game Icon/Image */}
-              <div className="mb-6 text-center group-hover:scale-105 transition-transform duration-300">
+              <div className="mb-6 text-center">
                 {game.imageUrl ? (
                   <img 
                     src={game.imageUrl} 
@@ -160,7 +160,7 @@ const Games = () => {
               {/* Game Info */}
               <div className="space-y-4">
                 <div className="flex justify-between items-start">
-                  <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-bold text-foreground">
                     {game.title}
                   </h3>
                   <div className="flex items-center gap-2">
@@ -199,7 +199,7 @@ const Games = () => {
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none" />
+              
             </div>
           ))}
         </div>
