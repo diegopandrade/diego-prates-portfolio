@@ -61,13 +61,22 @@
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <button class="mobile-link" data-section="hero">Home</button>
+                <button class="mobile-link" data-section="about">About</button>
+                <button class="mobile-link" data-section="games">Games</button>
+                <button class="mobile-link" data-section="experience">Experience</button>
+                <button class="mobile-link" data-section="contact">Contact</button>
             </div>
         </div>
     </nav>

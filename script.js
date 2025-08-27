@@ -7,9 +7,9 @@ class Portfolio {
         this.scrollArrow = document.querySelector('.scroll-arrow');
         
         this.mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        this.mobileMenu = document.getElementById('mobile-menu');
         this.sections = ['hero', 'about', 'games', 'experience', 'contact'];
         this.activeSection = 'hero';
-        
         this.init();
     }
     
@@ -101,12 +101,41 @@ class Portfolio {
             });
         });
         
-        
-        // Mobile menu (placeholder for future implementation)
-        this.mobileMenuBtn.addEventListener('click', () => {
-            // Future: implement mobile menu toggle
-            console.log('Mobile menu clicked - implement dropdown menu');
-        });
+        // Mobile menu toggle and links
+        if (this.mobileMenuBtn && this.mobileMenu) {
+            this.mobileMenuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = this.mobileMenu.classList.toggle('open');
+                this.mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            this.mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const sectionId = link.getAttribute('data-section');
+                    this.scrollToSection(sectionId);
+                    this.mobileMenu.classList.remove('open');
+                    this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (this.mobileMenu.classList.contains('open')) {
+                    const target = e.target;
+                    if (!this.mobileMenu.contains(target) && target !== this.mobileMenuBtn) {
+                        this.mobileMenu.classList.remove('open');
+                        this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 640) {
+                    this.mobileMenu.classList.remove('open');
+                    this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
     }
     
     scrollToSection(sectionId) {
