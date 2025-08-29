@@ -132,7 +132,7 @@ const Games = () => {
           {games.map((game, index) => (
             <div 
               key={index}
-              className="game-card group cursor-pointer"
+              className="game-card group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Game Icon/Image */}
