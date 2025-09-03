@@ -1,63 +1,98 @@
 const Experience = () => {
   const experiences = [
     {
-      title: "Technical Producer",
       company: "Avalanche Studios",
-      period: "2022 - Present",
       location: "Stockholm, Sweden",
-      achievements: [
-        "Leading production of next-generation AAA titles with budgets exceeding $50M",
-        "Implemented agile development processes reducing development time by 25%",
-        "Managing cross-functional teams of 80+ developers across multiple locations",
-        "Pioneered new technical workflows for real-time collaboration"
+      roles: [
+        {
+          title: "Technical Producer",
+          period: "2022 - Present",
+          achievements: [
+            "Leading production of next-generation AAA titles with budgets exceeding $50M",
+            "Implemented agile development processes reducing development time by 25%",
+            "Managing cross-functional teams of 80+ developers across multiple locations",
+            "Pioneered new technical workflows for real-time collaboration"
+          ]
+        },
+        {
+          title: "Senior Producer",
+          period: "2019 - 2022",
+          achievements: [
+            "Successfully shipped 3 major titles generating $200M+ in revenue",
+            "Established quality assurance protocols improving bug reduction by 40%",
+            "Led technical integration of new game engines and development tools",
+            "Mentored junior producers and technical staff"
+          ]
+        },
+        {
+          title: "Producer",
+          period: "2017 - 2019",
+          location: "New York, USA",
+          achievements: [
+            "Coordinated development of open-world action games",
+            "Managed relationships with external vendors and contractors",
+            "Optimized resource allocation across multiple concurrent projects",
+            "Delivered projects on time and within budget constraints"
+          ]
+        }
       ]
     },
     {
-      title: "Senior Producer",
-      company: "Avalanche Studios",
-      period: "2019 - 2022",
-      location: "Stockholm, Sweden",
-      achievements: [
-        "Successfully shipped 3 major titles generating $200M+ in revenue",
-        "Established quality assurance protocols improving bug reduction by 40%",
-        "Led technical integration of new game engines and development tools",
-        "Mentored junior producers and technical staff"
-      ]
-    },
-    {
-      title: "Producer",
-      company: "Avalanche Studios",
-      period: "2017 - 2019",
-      location: "New York, USA",
-      achievements: [
-        "Coordinated development of open-world action games",
-        "Managed relationships with external vendors and contractors",
-        "Optimized resource allocation across multiple concurrent projects",
-        "Delivered projects on time and within budget constraints"
-      ]
-    },
-    {
-      title: "Assistant Producer",
-      company: "Square Enix",
-      period: "2015 - 2017",
-      location: "Tokyo, Japan",
-      achievements: [
-        "Supported production of JRPG titles for global markets",
-        "Coordinated localization efforts across 8 different languages",
-        "Managed QA testing phases and community feedback integration",
-        "Contributed to project planning and milestone tracking"
-      ]
-    },
-    {
-      title: "Junior Producer",
-      company: "Indie Game Collective",
-      period: "2013 - 2015",
+      company: "Samsung - SIDIA",
       location: "São Paulo, Brazil",
-      achievements: [
-        "Produced 5 indie games from concept to market release",
-        "Established development pipelines for small team efficiency",
-        "Managed publishing relationships and marketing campaigns",
-        "Built foundational skills in project management and team leadership"
+      roles: [
+        {
+          title: "Senior Game Producer",
+          period: "2014 - 2017",
+          achievements: [
+            "Led development of mobile gaming experiences for Samsung devices",
+            "Managed cross-platform game optimization and performance",
+            "Coordinated with hardware teams for gaming-focused features",
+            "Delivered 10+ mobile titles with 50M+ combined downloads"
+          ]
+        },
+        {
+          title: "Game Producer",
+          period: "2012 - 2014",
+          achievements: [
+            "Produced mobile games for Samsung's ecosystem",
+            "Established QA processes for mobile game development",
+            "Managed relationships with external development studios",
+            "Contributed to Samsung's mobile gaming strategy"
+          ]
+        }
+      ]
+    },
+    {
+      company: "Square Enix",
+      location: "Tokyo, Japan",
+      roles: [
+        {
+          title: "Assistant Producer",
+          period: "2015 - 2017",
+          achievements: [
+            "Supported production of JRPG titles for global markets",
+            "Coordinated localization efforts across 8 different languages",
+            "Managed QA testing phases and community feedback integration",
+            "Contributed to project planning and milestone tracking"
+          ]
+        }
+      ]
+    },
+    {
+      company: "Indie Game Collective",
+      location: "São Paulo, Brazil",
+      roles: [
+        {
+          title: "Junior Producer",
+          period: "2013 - 2015",
+          achievements: [
+            "Produced 5 indie games from concept to market release",
+            "Established development pipelines for small team efficiency",
+            "Managed publishing relationships and marketing campaigns",
+            "Built foundational skills in project management and team leadership"
+          ]
+        }
       ]
     }
   ];
@@ -92,22 +127,36 @@ const Experience = () => {
 
                 {/* Content */}
                 <div className="flex-1 game-card">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                  {/* Company Header */}
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-foreground mb-1">{exp.title}</h3>
-                      <p className="text-xl text-primary font-semibold">{exp.company}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-lg font-semibold text-muted-foreground">{exp.period}</p>
+                      <h3 className="text-2xl font-bold text-primary mb-1">{exp.company}</h3>
                       <p className="text-sm text-muted-foreground">{exp.location}</p>
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    {exp.achievements.map((achievement, achievementIndex) => (
-                      <div key={achievementIndex} className="flex items-start gap-3">
-                        <span className="text-primary text-lg mt-1">▸</span>
-                        <p className="text-muted-foreground leading-relaxed">{achievement}</p>
+                  {/* Roles */}
+                  <div className="space-y-6">
+                    {exp.roles.map((role, roleIndex) => (
+                      <div key={roleIndex} className="border-l-2 border-primary/30 pl-4">
+                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3">
+                          <h4 className="text-xl font-semibold text-foreground">{role.title}</h4>
+                          <div className="text-right">
+                            <p className="text-lg font-semibold text-muted-foreground">{role.period}</p>
+                            {role.location && role.location !== exp.location && (
+                              <p className="text-sm text-muted-foreground">{role.location}</p>
+                            )}
+                          </div>
+                        </div>
+
+                        <div className="space-y-3">
+                          {role.achievements.map((achievement, achievementIndex) => (
+                            <div key={achievementIndex} className="flex items-start gap-3">
+                              <span className="text-primary text-lg mt-1">▸</span>
+                              <p className="text-muted-foreground leading-relaxed">{achievement}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     ))}
                   </div>
