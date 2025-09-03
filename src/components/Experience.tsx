@@ -97,6 +97,11 @@ const Experience = () => {
     }
   ];
 
+  // Debug: Log the experiences structure
+  console.log('Experiences data:', experiences);
+  console.log('Number of experience entries:', experiences.length);
+  console.log('Samsung entries:', experiences.filter(exp => exp.company.includes('Samsung')));
+
   return (
     <section id="experience" className="section-padding">
       <div className="max-w-4xl mx-auto">
