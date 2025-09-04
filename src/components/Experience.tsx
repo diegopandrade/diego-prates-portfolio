@@ -80,6 +80,32 @@ const Experience = () => {
       ]
     },
     {
+      company: "Hoplon Infotainment",
+      location: "Florianópolis, Brazil",
+      roles: [
+        {
+          title: "Producer",
+          period: "2013 - 2014",
+          achievements: [
+            "Producer with expertise in both creative and technical aspects",
+            "Collaborated with Square Enix on major gaming projects",
+            "Led cross-functional teams in game development cycles",
+            "Managed project timelines and deliverable coordination"
+          ]
+        },
+        {
+          title: "Programmer",
+          period: "2012 - 2013",
+          achievements: [
+            "Game Developer skilled in Unity3D, C#, and AI implementation",
+            "Developed core gameplay mechanics and systems",
+            "Implemented AI behaviors and game logic",
+            "Contributed to technical architecture decisions"
+          ]
+        }
+      ]
+    },
+    {
       company: "Indie Game Collective",
       location: "São Paulo, Brazil",
       roles: [
