@@ -167,24 +167,30 @@ const Experience = () => {
                   </div>
 
                   {/* Roles */}
-                  <div className="space-y-6">
+                  <div className="space-y-8">
                     {exp.roles.map((role, roleIndex) => (
-                      <div key={roleIndex} className="border-l-2 border-primary/30 pl-4">
-                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3">
-                          <h4 className="text-xl font-semibold text-foreground">{role.title}</h4>
+                      <div 
+                        key={roleIndex} 
+                        className="relative bg-card/30 rounded-lg p-6 border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale"
+                      >
+                        {/* Role indicator line */}
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-primary/50 rounded-l-lg" />
+                        
+                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                          <h4 className="text-xl font-bold text-primary mb-1">{role.title}</h4>
                           <div className="text-right">
                             <p className="text-lg font-semibold text-muted-foreground">{role.period}</p>
                             {role.location && role.location !== exp.location && (
-                              <p className="text-sm text-muted-foreground">{role.location}</p>
+                              <p className="text-sm text-muted-foreground/80">{role.location}</p>
                             )}
                           </div>
                         </div>
 
-                        <div className="space-y-3">
+                        <div className="space-y-3 ml-4">
                           {role.achievements.map((achievement, achievementIndex) => (
-                            <div key={achievementIndex} className="flex items-start gap-3">
-                              <span className="text-primary text-lg mt-1">▸</span>
-                              <p className="text-muted-foreground leading-relaxed">{achievement}</p>
+                            <div key={achievementIndex} className="flex items-start gap-3 animate-fade-in" style={{ animationDelay: `${achievementIndex * 0.1}s` }}>
+                              <span className="text-primary text-lg mt-1 font-bold">▸</span>
+                              <p className="text-muted-foreground leading-relaxed text-sm">{achievement}</p>
                             </div>
                           ))}
                         </div>
