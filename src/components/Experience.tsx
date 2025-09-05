@@ -162,6 +162,8 @@ const Experience = () => {
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                     <div>
                       <h3 className="text-2xl font-bold text-primary mb-1">{exp.company}</h3>
+                    </div>
+                    <div className="text-right">
                       <p className="text-sm text-muted-foreground">{exp.location}</p>
                     </div>
                   </div>
